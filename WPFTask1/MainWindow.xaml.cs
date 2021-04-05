@@ -33,7 +33,10 @@ namespace WPFTask1
             switch (e.ChangedButton)
             {
                 case MouseButton.Left:
+                {
                     ChangeButtonColor(sender, e);
+                    MessageBox.Show($"Button {(sender as Button)?.Content} is clicked", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
                     break;
                 case MouseButton.Right:
                     ChangeWindowTitle(sender, e);
